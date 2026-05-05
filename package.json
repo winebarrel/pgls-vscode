@@ -1,0 +1,55 @@
+{
+  "name": "pgls-vscode",
+  "displayName": "pgls",
+  "description": "VSCode client for the pgls PostgreSQL language server.",
+  "version": "0.0.1",
+  "publisher": "winebarrel",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/winebarrel/pgls-vscode.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:sql",
+    "onLanguage:go"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "pgls",
+      "properties": {
+        "pgls.command": {
+          "type": "string",
+          "default": "pgls",
+          "description": "Path to the pgls executable. Must be on $PATH or absolute."
+        },
+        "pgls.schemaDir": {
+          "type": "string",
+          "default": "db/schema",
+          "description": "Directory containing PostgreSQL DDL (.sql) files. Relative to the workspace root."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -p . -w",
+    "package": "vsce package"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.75.0",
+    "@vscode/vsce": "^3.0.0",
+    "typescript": "^5.4.0"
+  }
+}
