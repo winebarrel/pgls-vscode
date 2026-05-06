@@ -75,6 +75,27 @@ gives every contributor the same behaviour across every editor
 | --- | --- | --- |
 | `pgls.command` | `pgls` | Path or name of the server executable. |
 
+## Tip: silencing VSCode's auto link detection in Go
+
+VSCode auto-detects URL-shaped tokens in any text editor — and SQL
+qualified references like `u.email`, `o.id` happen to look like
+domain names (`.email`, `.id` etc. are real TLDs). pgls already
+ships document links that override the URL detection on tokens it
+recognises, but if you'd rather VSCode not draw URL underlines in
+the Go files where your SQL strings live, drop this
+language-scoped setting in your settings:
+
+```json
+{
+  "[go]": { "editor.links": false }
+}
+```
+
+`editor.links` defaults to `true`. Setting it to `false`
+unconditionally (without the `[go]` scope) disables VSCode's URL
+detection across every language; the scoped form above leaves
+links in Markdown/SQL/etc. untouched.
+
 ## Try it
 
 A complete demo workspace lives at
