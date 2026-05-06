@@ -1,11 +1,22 @@
 # pgls-vscode
 
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/winebarrel.pgls-vscode?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
+
 VSCode client for the [pgls](https://github.com/winebarrel/pgls) PostgreSQL
 language server.
 
 Provides completion, hover, goto-definition, document links, and
 diagnostics for SQL — both inside `.sql` files and inside SQL string
 literals embedded in `.go` source.
+
+## Install
+
+[![Install from
+Marketplace](https://img.shields.io/badge/install-from%20marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
+
+Search for **pgls** in the VSCode Extensions panel, or open the
+[Marketplace listing](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
+directly.
 
 ## Prerequisite
 
@@ -18,7 +29,7 @@ go install github.com/winebarrel/pgls@latest
 Make sure `pgls` is on your `$PATH`. The extension defaults to invoking it
 by that name; set `pgls.command` to point elsewhere if needed.
 
-## Install (VSIX)
+## Install from VSIX (manual)
 
 ```sh
 npm install
