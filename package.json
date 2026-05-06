@@ -20,6 +20,7 @@
     "Programming Languages",
     "Linters"
   ],
+  "icon": "etc/icon.png",
   "main": "./out/extension.js",
   "activationEvents": [
     "onLanguage:sql",
