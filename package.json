@@ -46,6 +46,7 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p .",
     "watch": "tsc -p . -w",
+    "lint": "eslint src",
     "package": "vsce package",
     "publish": "vsce publish"
   },
@@ -55,7 +56,10 @@
   "devDependencies": {
     "@types/node": "^20.11.0",
     "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^8.59.2",
+    "@typescript-eslint/parser": "^8.59.2",
     "@vscode/vsce": "^3.0.0",
+    "eslint": "^10.3.0",
     "typescript": "^5.4.0"
   }
 }
