@@ -47,8 +47,8 @@
     "compile": "tsc -p .",
     "watch": "tsc -p . -w",
     "lint": "eslint src",
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "package": "npm ci && vsce package",
+    "publish": "npm ci && vsce publish"
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
