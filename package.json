@@ -2,7 +2,7 @@
   "name": "pgls-vscode",
   "displayName": "pgls",
   "description": "VSCode client for the pgls PostgreSQL language server.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "publisher": "winebarrel",
   "license": "MIT",
   "author": {
@@ -23,8 +23,7 @@
   "icon": "etc/icon.png",
   "main": "./out/extension.js",
   "activationEvents": [
-    "onLanguage:sql",
-    "onLanguage:go"
+    "workspaceContains:.pgls.json"
   ],
   "contributes": {
     "configuration": {
@@ -34,10 +33,6 @@
           "type": "string",
           "default": "pgls",
           "description": "Path to the pgls executable. Must be on $PATH or absolute."
-        },
-        "pgls.schemaDir": {
-          "type": "string",
-          "description": "Directory containing PostgreSQL DDL (.sql) files, relative to the workspace root. Leave unset to let pgls auto-discover the location from .pgls.json at the workspace root."
         }
       }
     }
