@@ -1,6 +1,6 @@
 # pgls-vscode
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/winebarrel.pgls?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/winebarrel.pgls-vscode?label=Marketplace)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
 
 VSCode client for the [pgls](https://github.com/winebarrel/pgls) PostgreSQL
 language server.
@@ -12,10 +12,10 @@ literals embedded in `.go` source.
 ## Install
 
 [![Install from
-Marketplace](https://img.shields.io/badge/install-from%20marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls)
+Marketplace](https://img.shields.io/badge/install-from%20marketplace-blue)](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
 
 Search for **pgls** in the VSCode Extensions panel, or open the
-[Marketplace listing](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls)
+[Marketplace listing](https://marketplace.visualstudio.com/items?itemName=winebarrel.pgls-vscode)
 directly.
 
 ## Prerequisite
