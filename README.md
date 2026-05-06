@@ -20,14 +20,15 @@ directly.
 
 ## Prerequisite
 
-Install the `pgls` server binary:
+The extension shells out to the `pgls` server binary. Install it
+following the
+[pgls install instructions](https://github.com/winebarrel/pgls#install)
+— either drop a pre-built archive on your `$PATH` or `go install`
+it from source.
 
-```sh
-go install github.com/winebarrel/pgls@latest
-```
-
-Make sure `pgls` is on your `$PATH`. The extension defaults to invoking it
-by that name; set `pgls.command` to point elsewhere if needed.
+The extension expects `pgls` to be on `$PATH`; set `pgls.command`
+in your VSCode settings to point elsewhere if it lives somewhere
+custom.
 
 ## Install from VSIX (manual)
 
