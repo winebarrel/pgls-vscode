@@ -2,7 +2,7 @@
   "name": "pgls-vscode",
   "displayName": "pgls",
   "description": "VSCode client for the pgls PostgreSQL language server.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "winebarrel",
   "license": "MIT",
   "author": {
