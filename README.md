@@ -52,37 +52,28 @@ Development Host with the extension loaded.
 
 ## Schema configuration
 
-pgls needs to know where your `CREATE TABLE` files live. Two ways to
-tell it:
+The extension activates only when the workspace contains a
+`.pgls.json` at one of its folder roots — that file is pgls's
+opt-in signal. Workspaces without `.pgls.json` see nothing from
+this extension, so no idle language server gets spawned.
 
-1. **`.pgls.json` at the workspace root (recommended).** pgls
-   auto-discovers the file, so a single config works across every
-   editor — VSCode, Vim, Neovim, Helix, plain CLI:
+Drop a `.pgls.json` at the workspace root pointing at your DDL:
 
-   ```json
-   { "schemaDir": "db/schema" }
-   ```
+```json
+{ "schemaDir": "db/schema" }
+```
 
-   Commit this to the repo and every contributor gets the same
-   behaviour without per-editor wiring.
-
-2. **VSCode-only setting.** Set `pgls.schemaDir` in
-   `.vscode/settings.json` if you'd rather not commit `.pgls.json`
-   (or want to override it per workstation):
-
-   ```json
-   { "pgls.schemaDir": "db/migrations" }
-   ```
-
-The VSCode setting takes precedence over `.pgls.json` when both are
-present.
+See the [pgls README](https://github.com/winebarrel/pgls#quickstart)
+for the full set of fields (`schemaDir`, `sqlFunctions`, etc.). The
+file is pgls's authoritative config — committing it to the repo
+gives every contributor the same behaviour across every editor
+(VSCode, Vim, Neovim, Helix, plain CLI).
 
 ## Settings
 
 | Setting | Default | Description |
 | --- | --- | --- |
 | `pgls.command` | `pgls` | Path or name of the server executable. |
-| `pgls.schemaDir` | `db/schema` | DDL directory relative to the workspace root. Falls through to `.pgls.json` and pgls's own discovery when unset. |
 
 ## Try it
 
