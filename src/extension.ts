@@ -10,19 +10,24 @@ let client: LanguageClient | undefined;
 export function activate(_context: ExtensionContext): void {
   const cfg = workspace.getConfiguration('pgls');
   const command = cfg.get<string>('command', 'pgls');
-  const schemaDir = cfg.get<string>('schemaDir', 'db/schema');
+  const schemaDir = cfg.get<string>('schemaDir');
 
   const serverOptions: ServerOptions = {
     run: { command },
     debug: { command },
   };
 
+  const initializationOptions: { schemaDir?: string } = {};
+  if (schemaDir) {
+    initializationOptions.schemaDir = schemaDir;
+  }
+
   const clientOptions: LanguageClientOptions = {
     documentSelector: [
       { scheme: 'file', language: 'sql' },
       { scheme: 'file', language: 'go' },
     ],
-    initializationOptions: { schemaDir },
+    initializationOptions,
   };
 
   client = new LanguageClient('pgls', 'pgls', serverOptions, clientOptions);

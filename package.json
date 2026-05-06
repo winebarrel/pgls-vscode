@@ -37,8 +37,7 @@
         },
         "pgls.schemaDir": {
           "type": "string",
-          "default": "db/schema",
-          "description": "Directory containing PostgreSQL DDL (.sql) files. Relative to the workspace root."
+          "description": "Directory containing PostgreSQL DDL (.sql) files, relative to the workspace root. Leave unset to let pgls auto-discover the location from .pgls.json at the workspace root."
         }
       }
     }
