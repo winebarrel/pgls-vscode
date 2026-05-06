@@ -2,7 +2,7 @@
   "name": "pgls-vscode",
   "displayName": "pgls",
   "description": "VSCode client for the pgls PostgreSQL language server.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "winebarrel",
   "license": "MIT",
   "author": {
@@ -47,8 +47,8 @@
     "compile": "tsc -p .",
     "watch": "tsc -p . -w",
     "lint": "eslint src",
-    "package": "vsce package",
-    "publish": "vsce publish"
+    "package": "npm ci && vsce package",
+    "publish": "npm ci && vsce publish"
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
