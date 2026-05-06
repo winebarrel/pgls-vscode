@@ -7,6 +7,7 @@ src/**
 node_modules/**
 tsconfig.json
 eslint.config.mjs
+etc/icon.svg
 **/*.map
 **/*.ts
 *.vsix
